@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Como configurar o Babel</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Como configurar o babel usando o Yarn</h1>
+        <p class="obs">Sabemos que o Javascript é atualizado constantemente, porém, os browsers não seguem na mesma velocidade. Para isso existe o Babel - ele irá transformar toda linguagem JS nova em uma linguagem JS que todos os browsers entenderiam. É importante salientar que isso é possível pois os comandos novos que surgem são os mesmos comandos mais antigos, porém, modificados para um melhor uso. </p>
+
+        <p>
+            <h2>1 . Download Yarn</h2>
+            <p>Procure no Google,baixe o Yarn e instale-o</p>
+
+            <h2>2. Crie o package.json</h2>
+            <p>Dentro do diretório, insira o comando abaixo</p>
+            <p class="code">yarn init</p>
+            <p>Dê enter para todas as perguntas questionadas. Após o processo o yarn irá criar o package.json</p>
+            <p class="obs">O package.json que foi criado com o comando <i>yarn init</i> contém todas as informações sobre o projeto em questão. Seu repositório (url), sua versão, dependências de produção e dependências de desenvolvimento, etc... </p>
+            </p>
+            <h2>
+                3. Baixar o Babel
+            </h2>
+            <p>Para que isso seja feito, precisamos usar o terminal. </p>
+            <p class="code">yarn add @babel/cli</p>
+            <p class="obs">Isso fará com que instalemos o Babel e deixe-nos usar seus comandos no terminal.</p>
+
+            <h2>4. Preset-env</h2>
+            <p>Instale a preset-env com o comando abaixo</p>
+            <p class="code">yarn add @babel/preset-env</p>
+            <p class="obs">Já falamos sobre a funcionalidade do Babel. O Preset-env é quem sabe qual comando utilizar para substituir o que está sendo usado. <br><br>
+            Junto com o Preset-env é criado a pasta Node_modules (pasta que contém todos os arquivos necessários para que o Babel-preset-env funcione, e o yarn.lock. O Yarn.lock é o arquivo que contém a listagem do que foi instalado e em qual versão - isso serve para que em todos os locais onde forem rodadas seus projetos, que eles sejam rodados nas versões corretas para evitar bugs.</p>
+
+            <h2>5. Gitignore (opcional - se está trabalhando com controle de versão)</h2>
+            <p>Faça a criação do git Ignore. Apenas vá na pasta do seu projeto e crie um arquivo chamado ".gitignore" (não esqueça do ponto. Ele fará com que o arquivo fique escondido, mas ainda funcional.)  </p>
+
+            <h2>6. Criar arquivo de configuração</h2>
+            <p> Criar um arquivo dentro da pasta do projeto com o nome ".babelrc" - não se esquecer do ponto para que o arquivo fique escondido. Incluir o seguinte conteúdo dentro do arquivo. Nele estamos só dizendo da onde o Babel vai ver os presets. </p>
+            <p class="code">
+                {<br>
+                    &nbsp&nbsp&nbsp   "presets":["@babel/preset-env"]><br>
+                }
+            </p>
+            <h2>7. Criar arquivo JS</h2>
+            <p>
+                Criar um arquivo do JS onde você irá incluir seu código. (Exemplo: main.js)
+            </p>
+
+            <h2>8. Adicionar script para a criação do bundle.js</h2>
+            <p>Dentro do package.json você também deverá incluir um script onde será rodado o comando onde será criado o arquivo já com o código modificado pelo babel. Nesse caso, o Babel irá pegar o código de Main.js, irá modifica-lo e irá o incluir dentro de Bundle.js. Adicione o seguinte comando dentro do package.json. O argumento -w ao final é onde você diz para o babel estar SEMPRE rodando e verificando por mudanças - dessa forma ele retornará o código modificado sem a necessidade de estarmos rodando este script (vide passo 9) todo momento. Demos o nome de DEV para este script.</p>
+            <p class="code">
+                "scripts": {<br>
+                    &nbsp&nbsp&nbsp   "dev": "babel ./main.js -o ./bundle.js -w"<br>
+                  }<br>
+            </p>
+
+            <h2>9. Instale o Babel Core</h2>
+            <p>Será necessário efetuar a instalação de mais uma dependência. O Babel Core. Digite o comando abaixo.</p>
+            <p class="code">yarn add @babel/core</p>
+
+            <h2>10. Rodar o script criado</h2>
+            <p>Precisamos rodar o script que foi criado no passo 8. No terminal digite:</p>
+            <p class="code">yarn dev</p>
+
+            <h2>Pronto!</h2>
+            <p>Agora todo código digitado dentro do arquivo main.js será convertido no bundle.js. Não esquecer que se for importado dentro de um arquivo html, o arquivo correto é o bundle.js.</p>
+
+    </body>
+    <style>
+
+    </style>
+</html>

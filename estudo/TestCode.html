@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Event Propagation</title>
+        <meta charset="UTF-8" />
+
+    </head>
+    <body onload="onLoad()">
+
+        <!--Squares 1-->
+        <div style="display:inline-block">
+            <div class="outer" style="height: 100px; width: 100px;">
+                Outer
+                <div class="inner" style="height: 50px; width: 50px;margin:20px"> 
+                    Inner
+                </div>
+            </div>
+        </div>
+ <!--Squares 2-->
+        <div style="display:inline-block">
+            <div class="outer" style="height: 100px; width: 100px;">
+                Outer
+                <div class="inner" style="height: 50px; width: 50px;margin:20px"> 
+                    Inner
+                </div>
+            </div>
+        </div>
+
+         <!--Squares 3-->
+         <div style="display:inline-block">
+            <div class="outer" style="height: 100px; width: 100px;">
+                Outer
+                <div class="inner" style="height: 50px; width: 50px;margin:20px"> 
+                    Inner
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+    <script>
+        function onLoad(){
+            
+            const elOuter = document.querySelectorAll(".outer")
+
+            elOuter.forEach(element=>{
+                element.addEventListener('click', fnChangeColor,false)
+            })
+        }
+
+        function fnChangeColor(e){
+
+            e.currentTarget.style.border="1px solid black"
+
+            if (e.stopPropagation) {
+  
+                e.stopPropagation()
+            } else {
+  
+                e.cancelBubble = true
+            }
+        }
+
+    </script>
+</html>

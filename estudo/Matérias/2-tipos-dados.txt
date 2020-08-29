@@ -1,0 +1,26 @@
+STRINGS
+
+Strings são textos. 
+Tudo de A-Z serão strings. Alguns números também podem ser considerados como textos, mas verificar estes casos mais adiante quando falarmos sobre NUMBERS. 
+
+Quando definimos variáveis do tipo STRINGS, definimos ela utilizando. 
+
+"texto"
+'texto' - Estes dois meios são iguais. 
+
+`texto` - Muitas vezes gostaríamos de CONCATENAR (verificar definição mais abaixo) variáveis ao texto. Utilizando crases podemos fazer isso de uma forma bem prática. 
+
+
+NUMBERS
+
+Os numerais podem servir para os dois casos - números e textos. 
+Quando vamos utilizar essa informação para fazermos cálculos em geral, temos que declarar esta variável como NÚMERO (number). 
+
+Agora vamos para outro caso. Digamos que eu vou utilizar esses números para deixar registrado o número da minha casa em um certo endereço - nada vai ser calculado, portanto, podemos prosseguir e declarar esta variável como TEXTO (string). 
+
+Para declarar variáveis como numbers, apenas escrevemos os números nestes seguintes formatos
+10
+0.4
+10.19
+0.000002
+

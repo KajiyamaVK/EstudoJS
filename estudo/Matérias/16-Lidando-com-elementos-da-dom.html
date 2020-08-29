@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Lidando com os elementos da DOM</title>
+</head>
+<body>
+    <div id="div1" class="divClass1">
+        <input type="text"/><br>
+        <input type="text" id="Id1"/><br>
+    </div>
+    <div id="div2" class="divClass2">
+        <input type="text"id="Id2" name="Nome"/><br>
+        <input type="text" class="Classe" name="Nome"/><br>
+        <input type="text" name="Nome2"/><br>
+        <input type="text"/><br>    
+    </div>
+
+    <button onclick="BtnClick()" style="margin-top: 100px;">Botão</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3" onclick="click3()">Button 3</button>
+</body>
+    <script>
+        "use strict"
+        
+        function BtnClick(){
+            var teste2 = document.getElementsByTagName('input')
+            console.log("Todos elementos INPUT")
+            console.log(teste2)
+
+            console.log("Mostrando elemento com ID=Id2")
+            var teste = document.getElementById("Id2")
+            console.log(teste)
+
+            console.log("Mostrando elemento com Class=Classe")
+            var teste3 = document.getElementsByClassName("Classe")
+            console.log(teste3)
+
+            console.log("Utilizando o query selector para procurar um elemento")
+            const teste4 = document.querySelector("div#div1 input#Id1") //Query selector retorna apenas UM elemento
+            console.log(teste4)
+            const teste5 = document.querySelector("div#div2 input.Classe")
+            console.log(teste5)
+
+            //No queryselector devemos ir na ordem necessária. No primeiro seletor procuramos uma div que tinha uma ID chamada div1. Denttro dela procuramos um input com uma id chamada Id1. Já no segundo caso, prcuramos uma div com id div2, com um input dentro com uma classe chamada Classe. 
+
+            //Para procurarmos por algum outro atributo que não seja classe nem ID. 
+            console.log("Procurando elemento com nome=Nome2")
+            const teste6 = document.querySelector("div#div2 [name=Nome2]")
+            console.log(teste6)
+
+            //Podemos procurar por parte do nome
+            console.log("Procurando elemento com parte do nome NO")
+            const teste7 = document.querySelectorAll('[name^="No"]') //QuerySelectorAll para achar uma lista. ^marca que será parte do nome do atributo que será informado. 
+            console.log(teste7)
+
+             //Ok, guardamos alguns elementos dentro de variáveis, portanto, conseguimos manipular seus atributos pelo código aqui - inclusive atribuir functions a eles. 
+            const btnTeste = document.querySelector("button#btn2")
+            
+            teste6.onclick=()=>{ // Lembre-se que esta dentro do método do botão. Primeiro clique no botão!!!
+                alert("clicado")
+            }
+            console.log(teste6)
+            
+            
+        }
+
+        //Podemos modificar atributos dos elementos da DOM
+        function click3(){
+            const btnTeste3 = document.getElementById("btn3")
+            btnTeste3.innerHTML = "teste"     
+        }
+
+       
+    </script>
+</html>

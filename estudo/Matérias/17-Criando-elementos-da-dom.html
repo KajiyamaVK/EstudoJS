@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Criando elementos da dom</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+
+        debugger
+        var newElement = document.createElement('p')
+        var texto = document.createTextNode('Um parágrafo qualquer')
+        newElement.setAttribute('class','pClass')
+        newElement.setAttribute('id','pId')
+        newElement.style.border='1px solid red'
+        newElement.appendChild(texto)
+
+        var ElementoPai = document.querySelector('body')
+
+        ElementoPai.appendChild(newElement)
+
+        newElement = document.createElement('input')
+        newElement.setAttribute('type','text')
+        newElement.id = "inputId"
+        newElement.className = "inputClassName"
+
+        ElementoPai.appendChild(newElement)
+        
+
+    </script>
+</html>

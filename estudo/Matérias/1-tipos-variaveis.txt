@@ -1,0 +1,15 @@
+Diferença entre var, let, e const. 
+
+VAR
+
+Com o passar do tempo, o VAR não existe mais. Não devemos mais utiliza-lo. 
+
+LET
+
+São valores que poderão ser modificados em tempo de execução por algum código posterior à sua criação.
+Um ótimo exemplo disso seria para contadores que estão a todo momento modificando valores em variáveis. 
+
+CONST
+
+São valores que não se alteram. 
+Digamos que vamos cadastrar um cliente. Ao clicar em REGISTRAR, o sistema vai ter que criar uma variável para o nome e atribuir um valor à ela - por exemplo, "Paulo". No meio do código do botão registrar, esse valor não será modificado. 

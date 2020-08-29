@@ -1,0 +1,25 @@
+Você realmente ficaria se perguntando o porquê de existir os dois casos atendemos as demandas necessárias. 
+
+Para conhecimento geral (básico), o IF efetua a comparação entre duas condições e, caso forem atendidas, ele efetua alguma ação. 
+
+Por exemplo - Imagine que você precise de leite, portanto, você vai ao mercado. SE tiver leite, compre o leite e o achocolatado, senão, não compre nada. 
+
+Condição: Se tiver leite
+Ação: compre o leite e o achocolatado
+
+* Para maiores informações sobre IF, consulte o artigo referente a IF e ELSE. 
+
+Na programação isso é aplicado da seguinte forma. 
+
+Imagine um campo onde deverá ser preenchido a sua idade. Se você for menos de idade, o sistema avisará que não é possível que você prossiga. Caso for maior de idade, avise que ele poderá prosseguir. 
+
+Então você vai lá e coloca 18 anos. O sistema apresenta na tela dizendo, "Por favor, prossiga". 
+
+Você vai no campo novamente depois e digita 17 anos. O sistema apresenta na tela dizendo, "Você é menor de idade. Nâo poderá prosseguir."
+
+Podemos trabalhar com CASE e IF neste caso. Os dois funcionariam, porém, para um efeito de boas práticas, como ainda assim iremos comparar a idade digitada com a idade da maioridade (Idade>=18), trabalhamos com IFs. 
+
+Agora se os valores fossem diretos e certo, por exemplo, se um sistema aceitasse apenas pessoas com 18 anos. neste caso deveríamos trabalhar com CASE. 
+
+Caso a idade digitada for 18, apresente a mensagem de boas vindas. Caso contrário, apresente a mensagem dizendo que ele não poderá prosseguir. 
+
