@@ -1,20 +1,29 @@
-function fn1(callback, errorCallback) {
-    console.log("Starting 3 sec counting now...")
-    setTimeout(function() {
-      try {
-        callback();
-      } catch (error) {
-        errorCallback();
-      }
-    }, 3000);
-  }
 
-function fn2(){
-    console.log("fn2")
+
+// let var1
+
+// function fnAfter(){
+//   console.log(1 + var1)
+// }
+
+// function fn1(callback){
+//   try{
+//     setTimeout(()=>{var1 = 3},5000)
+//   }catch(error){
+//     console.log(error)
+//   }finally{
+  
+//   }
+//   callback()
+// }
+
+// fn1(fnAfter)
+let var1
+function fn(){
+  setTimeout(()=>{var1 = 3},5000)
+  .then(
+    console.log(1 + var1)
+  )
 }
 
-  function fn3() {
-    fn1(function() { console.log('It works!'); }, fn2);
-  }
-
-  fn3()
+fn()

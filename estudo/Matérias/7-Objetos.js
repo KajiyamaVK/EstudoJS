@@ -64,6 +64,7 @@ console.log(objeto1)
 console.log(Object.values(objeto1)) // desta forma ele colocará em formato de lista
 
 console.log(Object.keys(objeto1), ` - Object.keys`) //Aqui visualizamos apenas as chaves. 
+console.log(Object.keys(objeto1)[0], ` - Pegando apenas um dos valores por index.`)
 
 //caso formos visualizar informação referente a um campo apenas, utilizamos o objeto1.tamanho objeto1.preco etc.... 
 

@@ -13,7 +13,7 @@ const person = {
     },
     //Criando o método set AGE1. Ele está sendo criado passando o value coletado com o get
     set age1(value){
-        this._age=value
+        this._age=value+1
     },
     //criando o método drive. Ele será chamado no final do código . 
     get drive(){
@@ -21,5 +21,7 @@ const person = {
     }
 
 }
-person.age=25
+person.age=26
+
 console.log(person.age1 +" "+person.drive)
+console.log(person.age +" "+person.drive)
