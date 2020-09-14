@@ -1,29 +1,20 @@
+//Use Promisses. Forget callbacks!
 
 
-// let var1
-
-// function fnAfter(){
-//   console.log(1 + var1)
-// }
-
-// function fn1(callback){
-//   try{
-//     setTimeout(()=>{var1 = 3},5000)
-//   }catch(error){
-//     console.log(error)
-//   }finally{
-  
-//   }
-//   callback()
-// }
-
-// fn1(fnAfter)
-let var1
+let var1 = 1
 function fn(){
-  setTimeout(()=>{var1 = 3},5000)
-  .then(
-    console.log(1 + var1)
-  )
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{var1 = 3; resolve()},2000)
+    
+  })
+  
 }
 
 fn()
+  .then((resolve)=>{
+    console.log(var1+1)
+  })
+  .catch((reject)=>{
+    console.log("Deu certo, não")
+  })
+  

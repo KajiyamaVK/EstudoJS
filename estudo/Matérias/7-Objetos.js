@@ -16,6 +16,18 @@ Para criarmos uma variável do tipo objeto, iremos criar uma variável de maneir
 
 
 */
+const objects = [{
+    obj1:{
+        nome:"fulano",
+        idade:"32"
+    },
+    obj2:{
+        nome:"Ciclano",
+        idade:"35"
+    },
+}]
+
+console.log("asdfasdfasdfsadf",Object.values(objects[0]))
 
 const objeto1 = {
 
@@ -61,7 +73,7 @@ console.log(objeto1)
 
 //.. porém, como pode ver, ele mostra em formato de código - da mesma maneira que ele foi declarado. Agora, se fizermos da maneira abaixo, 
 
-console.log(Object.values(objeto1)) // desta forma ele colocará em formato de lista
+console.log("Object values -",Object.values(objeto1)) // desta forma ele colocará em formato de lista
 
 console.log(Object.keys(objeto1), ` - Object.keys`) //Aqui visualizamos apenas as chaves. 
 console.log(Object.keys(objeto1)[0], ` - Pegando apenas um dos valores por index.`)
